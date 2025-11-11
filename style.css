@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bgColor: #333;
+    --textPrimary: #fff;
+    --textSecundary: #666;
+    --primaryColor: #fd4;
+}
+
+main {
+    width: 600px;
+    margin: 50px auto;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--bgColor);
+    color: var(--textPrimary);
+    font-size: 1.4rem;
+}
+
+h1 {
+    color: var(--primaryColor);
+}
+
+h1 svg {
+    width: 40px;
+    fill: var(--primaryColor);
+
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 10px 40px;
+}
+
+#botones {
+    text-align: right;
+    /*Text align es para que el texto se alienee a la posicion que queremos en este caso del ID botones*/
+}
+
+button {
+    background: rgba(255, 255, 255, 0.39);
+    border: 0;
+    color: rgba(255, 255, 255, .5);
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    /*Animacion sobre el cursor en el boton*/
+}
+
+#info {
+    color: var(--primaryColor);
+}
+
+div.palabras {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 5px;
+}
+
+input {
+    background-color: var(--bgColor);
+    border-color: rgb(236, 228, 228);
+    font-family: 'Roboto Mono', monospace;
+    ;
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 30px 0px 50px;
+    box-shadow: 0 0 10px rgb(211, 225, 12),
+        0 0 20px rgb(255, 251, 0),
+        0 0 40px rgb(173, 216, 79),
+        0 0 20px rgb(183, 255, 0);
+    transition: 0.3s;
+}
