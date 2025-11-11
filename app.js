@@ -1,3 +1,7 @@
+const input = document.getElementById("input");
+const contenedor = document.getElementById("palabras");
+let fraseActual = "";
+let porcentajeDeAcierto = 100;
 //Lista de frases de palabras
 const palabras = [
     "Aprende mecanografia para poder seguir avanzando en el mundo.",
@@ -65,11 +69,14 @@ const palabras = [
         return contarLetras;
     }
 
-//colocar en pantalla la frase
+
+//No se usa en el codigo, dejar en caso de ser requerido mas adelante
+/*
 function colocarFrase(){
     let contenedorFrase = document.getElementById('palabras').innerHTML = seleccionarTexto();
     return contenedorFrase;
 }
+*/
 
 //Separaremos el texto para poder escoger letra por letra y colocarle en sombreado antes de que escriba.
 /*function separarPalabraPorPalabra(){
@@ -88,6 +95,7 @@ function colocarFrase(){
         }
     }
     return textoSeparado;
+
 */ //Se logro identificar que en esta parte no era necesaria por que se podia separar por split desde el texto
 function separarLetraPorLetra() {
     let texto = seleccionarTexto(); // elegimos una frase aleatoria
@@ -100,7 +108,6 @@ function formatearTexto() {
     let letras = separarLetraPorLetra();
     let contenedor = document.getElementById("palabras");
     contenedor.innerHTML = ""; // limpiamos el contenido anterior
-
     letras.forEach((letra) => {
         const span = document.createElement("span");
         span.classList.add("letra");
@@ -109,9 +116,26 @@ function formatearTexto() {
     });
 }
 
+function letrasSinAdivinar(){
+    let letras = document.getElementById("palabras");
+    letras.setAttribute("style", "color: gray;")
+}
+
+function nuevoJuegoBoton(){
+    seleccionarTexto();
+    longitudDeTexto();
+    formatearTexto();
+}
+
+function compararTexto(){
+    input
+}
 
 function nuevoJuego(){
-    separarLetraPorLetra()
+    fraseActual =  seleccionarTexto();
+    formatearTexto(fraseActual);
+    letrasSinAdivinar();
+    nuevoJuegoBoton();
 }
 
 nuevoJuego();
