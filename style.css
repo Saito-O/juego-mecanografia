@@ -7,16 +7,18 @@
     --primaryColor: #fd4;
 }
 
-main {
-    width: 600px;
-    margin: 50px auto;
-}
-
 body {
     font-family: "Roboto Condensed", sans-serif;
     background-color: var(--bgColor);
     color: var(--textPrimary);
     font-size: 1.4rem;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
 }
 
 h1 {
@@ -25,12 +27,14 @@ h1 {
         0 0 5px rgb(255, 251, 0),
         0 0 0px rgb(173, 216, 79),
         0 0 10px rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 0px;
 }
 
-h1 svg {
+svg {
     width: 40px;
     fill: var(--primaryColor);
-
+    padding: 0px;
 }
 
 #header {
@@ -41,7 +45,6 @@ h1 svg {
 
 #botones {
     text-align: right;
-    /*Text align es para que el texto se alienee a la posicion que queremos en este caso del ID botones*/
 }
 
 button {
@@ -51,7 +54,6 @@ button {
     padding: 5px 20px;
     border-radius: 10px;
     cursor: pointer;
-    /*Animacion sobre el cursor en el boton*/
 }
 
 #info {
@@ -68,7 +70,6 @@ input {
     background-color: var(--bgColor);
     border-color: rgb(236, 228, 228);
     font-family: 'Roboto Condensed', monospace;
-    ;
     width: 100%;
     max-width: 700px;
     padding: 10px;
@@ -79,4 +80,40 @@ input {
         0 0 40px rgb(173, 216, 79),
         0 0 20px rgb(183, 255, 0);
     transition: 0.3s;
+}
+
+p {
+    text-align: center;
+}
+
+/* ----------------------------- */
+/*   RESPONSIVE PARA CELULARES   */
+/* ----------------------------- */
+
+@media (max-width: 600px) {
+
+    #header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 15px;
+    }
+
+    #botones {
+        text-align: center;
+    }
+
+    svg {
+        margin: 0 auto;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    input {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
 }

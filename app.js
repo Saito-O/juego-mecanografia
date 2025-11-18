@@ -38,7 +38,6 @@ const palabras = [
     "La suavidad de tus movimientos es clave para mejorar.",
     "La mecanografía convierte tus pensamientos en texto sin interrupciones.",
     "No importa la velocidad inicial, importa cuánto practiques.",
-    "El teclado QWERTY está diseñado para usarse sin mirar.",
     "La precisión siempre debe ir por delante de la velocidad.",
     "Mecanografiar rápido sin errores es como bailar sin pisar a tu pareja.",
     "Toma descansos cortos para evitar tensión en las manos.",
