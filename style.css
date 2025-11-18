@@ -49,8 +49,8 @@ svg {
 
 button {
     background: rgba(255, 255, 255, 0.39);
-    border: 0;
-    color: blue;
+    border: blue;
+    color: white;
     padding: 5px 20px;
     border-radius: 10px;
     cursor: pointer;
